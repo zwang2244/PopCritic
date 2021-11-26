@@ -52,7 +52,7 @@ export default function ReviewList(props) {
 
   useEffect(() => {
     var id = window.location.pathname.substring(props.type=="movie"?7:8);
-    fetch("https://popcritic.herokuapp.com/"+props.type+"/"+id+"/reviews").then(resp => resp.json()).then((data) => setReviews(data));
+    fetch("https://stark-taiga-39691.herokuapp.com/https://popcritic.herokuapp.com/"+props.type+"/"+id+"/reviews").then(resp => resp.json()).then((data) => setReviews(data));
   },[])
 
   return (

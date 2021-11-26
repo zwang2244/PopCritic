@@ -95,7 +95,7 @@ export default function SearchAppBar() {
   const [profile, setProfile] = useState(1);
 
   useEffect(() => {
-    fetch("https://popcritic.herokuapp.com/me",{headers: {token: window.localStorage.getItem("token")}}).then(resp => resp.json()).then((data) => setProfile(data)).catch(console.log);
+    fetch("https://stark-taiga-39691.herokuapp.com/https://popcritic.herokuapp.com/me",{headers: {token: window.localStorage.getItem("token")}}).then(resp => resp.json()).then((data) => setProfile(data)).catch(console.log);
   },[])
 
   function search(e) {

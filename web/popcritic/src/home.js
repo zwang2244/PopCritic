@@ -46,7 +46,8 @@ export default function Home() {
   const [movies, setMovies] = useState(0);
   
   useEffect(() => {
-    fetch("https://popcritic.herokuapp.com/movies").then(resp => resp.json()).then((data) => setMovies(data));
+    fetch("https://stark-taiga-39691.herokuapp.com/https://popcritic.herokuapp.com/movies").then(
+      resp => resp.json()).then((data) => setMovies(data));
   },[])
 
   return (

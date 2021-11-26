@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function addMovie(id) {
-  fetch("https://popcritic.herokuapp.com/add/"+id,{method: "POST", headers: {token: window.localStorage.getItem("token")}}).then(x=>x.text()).then(function() {
+  fetch("https://stark-taiga-39691.herokuapp.com/https://popcritic.herokuapp.com/add/"+id,{method: "POST", headers: {token: window.localStorage.getItem("token")}}).then(x=>x.text()).then(function() {
   	window.location.href = "/movie/"+id;
   }).catch(console.log);
 }
@@ -51,7 +51,7 @@ export default function Search() {
   useEffect(() => {
   	var query = window.location.pathname.substring(8);
   	setQuery(decodeURIComponent(query));
-    fetch("https://api.themoviedb.org/3/search/movie?api_key="+tmdb_api_key+"&query="+query).then(resp => resp.json()).then((data) => setMovies(data.results));
+    fetch("https://stark-taiga-39691.herokuapp.com/https://api.themoviedb.org/3/search/movie?api_key="+tmdb_api_key+"&query="+query).then(resp => resp.json()).then((data) => setMovies(data.results));
   },[])
 
   return (

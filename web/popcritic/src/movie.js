@@ -71,7 +71,7 @@ export default function Movie() {
 
   useEffect(() => {
   	var query = window.location.pathname.substring(7);
-    fetch("https://popcritic.herokuapp.com/movie/"+query).then(resp => resp.json()).then((data) => setMovie(data)).catch(() => {window.location.href="/"});
+    fetch("https://stark-taiga-39691.herokuapp.com/https://popcritic.herokuapp.com/movie/"+query).then(resp => resp.json()).then((data) => setMovie(data)).catch(() => {window.location.href="/"});
   },[])
 
   return (
