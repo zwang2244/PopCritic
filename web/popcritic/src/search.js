@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import {Helmet} from "react-helmet";
 
-const tmdb_api_key = ""; //Your TMDB API KEY
+const tmdb_api_key = "e0b72172995634e5cc17e53ed43358f3"; //Your TMDB API KEY
 
 const useStyles = makeStyles((theme) => ({
   list: {
@@ -51,7 +51,7 @@ export default function Search() {
   useEffect(() => {
   	var query = window.location.pathname.substring(8);
   	setQuery(decodeURIComponent(query));
-    fetch("https://stark-taiga-39691.herokuapp.com/https://api.themoviedb.org/3/search/movie?api_key="+tmdb_api_key+"&query="+query).then(resp => resp.json()).then((data) => setMovies(data.results));
+    fetch("https://api.themoviedb.org/3/search/movie?api_key="+tmdb_api_key+"&query="+query).then(resp => resp.json()).then((data) => setMovies(data.results));
   },[])
 
   return (
